@@ -19,6 +19,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { AdminComponent } from './admin/admin.component';
 import { CollectionComponent } from './collection/collection.component';
 import { AppMainNavComponent } from './app-main-nav/app-main-nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { AppMainNavComponent } from './app-main-nav/app-main-nav.component';
     DeleteUserComponent,
     AdminComponent,
     CollectionComponent,
-    AppMainNavComponent
+    AppMainNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +43,10 @@ import { AppMainNavComponent } from './app-main-nav/app-main-nav.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
