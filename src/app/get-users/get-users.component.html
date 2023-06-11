@@ -1,6 +1,23 @@
-<p>get-users works!</p>
-<div *ngFor="let user of users">
-  <p>Name: {{ user.name }}</p>
-  <p>Email: {{ user.email }}</p>
-  <hr />
+<!-- get-users.component.html -->
+<div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let user of users">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">User ID: {{ user.id }}</h5>
+          <p class="card-text">Name: {{ user.name }}</p>
+          <p class="card-text">Username: {{ user.username }}</p>
+          <p class="card-text">Email: {{ user.email }}</p>
+          <p class="card-text">
+            Address: {{ user.address.street }}, {{ user.address.suite }},
+            {{ user.address.city }}, {{ user.address.zipcode }}
+          </p>
+          <p class="card-text">
+            Geo: Lat: {{ user.address.geo.lat }}, Lng:
+            {{ user.address.geo.lng }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

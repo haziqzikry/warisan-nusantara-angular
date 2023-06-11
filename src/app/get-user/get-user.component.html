@@ -1,1 +1,13 @@
-<p>get-user works!</p>
+<!-- get-user.component.html -->
+<div *ngIf="user">
+  <h2>User Details (ID: {{ user.id }})</h2>
+  <p>Name: {{ user.name }}</p>
+  <p>Username: {{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Street: {{ user.address.street }}</p>
+  <p>Suite: {{ user.address.suite }}</p>
+  <p>City: {{ user.address.city }}</p>
+  <p>Zipcode: {{ user.address.zipcode }}</p>
+  <p>Latitude: {{ user.address.geo.lat }}</p>
+  <p>Longitude: {{ user.address.geo.lng }}</p>
+</div>
