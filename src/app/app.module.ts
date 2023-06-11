@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +20,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CollectionComponent } from './collection/collection.component';
 import { AppMainNavComponent } from './app-main-nav/app-main-nav.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { bootstrapApplication } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatListModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

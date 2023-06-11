@@ -1,13 +1,44 @@
-<!-- get-user.component.html -->
-<div *ngIf="user">
-  <h2>User Details (ID: {{ user.id }})</h2>
-  <p>Name: {{ user.name }}</p>
-  <p>Username: {{ user.username }}</p>
-  <p>Email: {{ user.email }}</p>
-  <p>Street: {{ user.address.street }}</p>
-  <p>Suite: {{ user.address.suite }}</p>
-  <p>City: {{ user.address.city }}</p>
-  <p>Zipcode: {{ user.address.zipcode }}</p>
-  <p>Latitude: {{ user.address.geo.lat }}</p>
-  <p>Longitude: {{ user.address.geo.lng }}</p>
+<div>
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Search User</h5>
+          <div class="form-group">
+            <label for="userIdInput">User ID:</label>
+            <input
+              type="number"
+              id="userIdInput"
+              class="form-control"
+              [(ngModel)]="id"
+            />
+          </div>
+          <button class="btn btn-primary" (click)="getUserById()">
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="user" class="mt-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">User Details</h5>
+        <p class="card-text"><strong>User ID:</strong> {{ user.id }}</p>
+        <p class="card-text"><strong>Name:</strong> {{ user.name }}</p>
+        <p class="card-text"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="card-text">
+          <strong>Address:</strong> {{ user.address.street }},
+          {{ user.address.suite }}, {{ user.address.city }},
+          {{ user.address.zipcode }}
+        </p>
+        <p class="card-text">
+          <strong>Geo:</strong> Lat: {{ user.address.geo.lat }}, Lng:
+          {{ user.address.geo.lng }}
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

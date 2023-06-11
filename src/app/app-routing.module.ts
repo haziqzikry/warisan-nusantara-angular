@@ -10,7 +10,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 const routes: Routes = [
   { path: 'demo', component: DemoComponent },
   { path: 'add-user', component: AddUserComponent },
-  { path: 'get-user', component: GetUserComponent },
+  { path: 'get-user/:id', component: GetUserComponent },
   { path: 'get-users', component: GetUsersComponent },
   { path: 'update-user', component: UpdateUserComponent },
   { path: 'delete-user', component: DeleteUserComponent },
